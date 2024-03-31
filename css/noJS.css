@@ -1,0 +1,59 @@
+#titlescreen {
+  display: none;
+}
+
+#gamescreen {
+  display: none;
+}
+
+#shoppanel {
+  display: none;
+}
+
+#upgradeshoppanel {
+  display: none;
+}
+
+#statspanel {
+  display: none;
+}
+
+#achievementsscreen {
+  display: none;
+}
+
+#debuginputscreen {
+  display: none;
+}
+
+#debugscreen {
+  display: none;
+}
+
+#settingsscreen {
+  display: none;
+}
+
+#loadingscreen {
+  display: none;
+}
+
+body {
+  text-align: center;
+  font-weight: 100;
+}
+
+h1#ns {
+  font-size: 20px;
+}
+
+a#ns {
+  font-size: 18px;
+  color: black;
+}
+
+a#ns:hover {
+  -webkit-text-stroke: 0.2px;
+  -webkit-text-stroke-color: black;
+  text-decoration-thickness: 2px;
+}

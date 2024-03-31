@@ -1,0 +1,1441 @@
+/* Font Awesome lib */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Courier font face (Not all systems have this, so it is defined here.) */
+
+@font-face {
+  font-family: 'CourierReg';
+  src: url('Courier.woff');
+}
+
+/* Animations */
+
+@keyframes coinOpacity {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes bgmove {
+  from {
+    opacity: 40%;
+    transform: translate3d(0, 0, 0)
+  }
+
+  to {
+    opacity: 0%;
+    transform: translate3d(0, 22vw, 0)
+  }
+}
+
+@keyframes titlestrsmov {
+  100% {
+    transform: translate3d(0, 71.5vh, 0);
+  }
+}
+
+@keyframes btmstringmov {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+
+  to {
+    transform: translate3d(0, -2.5vw, 0)
+  }
+}
+
+@keyframes dbgstringmov {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+
+  to {
+    transform: translate3d(0, -2vw, 0)
+  }
+}
+
+@keyframes smallCoinMove1 {
+  from {
+    transform: translate3d(0, 0, 0);
+    rotate: 0deg;
+  }
+
+  to {
+    transform: translate3d(14vw, 0, 0);
+    rotate: 270deg;
+  }
+}
+
+@keyframes smallCoinMove2 {
+  from {
+    transform: translate3d(0, 0, 0);
+    rotate: 0deg;
+  }
+
+  to {
+    transform: translate3d(-14vw, 0, 0);
+    rotate: 270deg;
+  }
+}
+
+@keyframes smallCoinMove3 {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg)
+  }
+
+  to {
+    transform: translate3d(14vw, 0, 0) rotate(360deg)
+  }
+}
+
+@keyframes smallCoinMove4 {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg)
+  }
+
+  to {
+    transform: translate3d(-14vw, 0, 0) rotate(-360deg)
+  }
+}
+
+@keyframes smallCoinSpin1 {
+  from {
+    transform: rotate(0deg) translate3d(14vw, 0, 0)
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(14vw, 0, 0)
+  }
+}
+
+@keyframes smallCoinSpin2 {
+  from {
+    transform: rotate(0deg) translate3d(-14vw, 0, 0)
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(-14vw, 0, 0)
+  }
+}
+
+@keyframes smallCoinSpin3 {
+  from {
+    transform: rotate(0deg) translate3d(14vw, 0, 0)
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(14vw, 0, 0)
+  }
+}
+
+@keyframes smallCoinSpin4 {
+  from {
+    transform: rotate(0deg) translate3d(-14vw, 0, 0)
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(-14vw, 0, 0)
+  }
+}
+
+@keyframes tsclickermov {
+  from {
+    transform: translate3d(0, 71.5vh, 0) rotate(0deg);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translate3d(4vw, 68.3vh, 0) rotate(320deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes startmov {
+  from {
+    transform: translate3d(0, 0, 0)
+  }
+
+  to {
+    transform: translate3d(0, -4.7vw, 0)
+  }
+}
+
+@keyframes coinpartmov {
+  from {
+    opacity: 100%;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  to {
+    opacity: 0%;
+    transform: translate3d(0, 1.4vw, 0) rotate(720deg);
+  }
+}
+
+@keyframes clickermov {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg)
+  }
+
+  to {
+    transform: translate3d(35.5vw, 7.2vw, 0) rotate(172deg)
+  }
+}
+
+@keyframes clickerclick {
+  from {
+    transform: translate3d(35.5vw, 7.2vw, 0) rotate(172deg)
+  }
+
+  to {
+    transform: translate3d(35.2vw, 6.9vw, 0) rotate(172deg)
+  }
+}
+
+@keyframes superclickermov {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg)
+  }
+
+  to {
+    transform: translate3d(44vw, 2vw, 0) rotate(175deg)
+  }
+}
+
+@keyframes superclickerclick {
+  from {
+    transform: translate3d(44vw, 2vw, 0) rotate(175deg)
+  }
+
+  to {
+    transform: translate3d(44.3vw, 1.7vw, 0) rotate(175deg)
+  }
+}
+
+@keyframes doublepointermov {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg)
+  }
+
+  to {
+    transform: translate3d(39.8vw, 6.9vw, 0) rotate(90deg)
+  }
+}
+
+@keyframes doublepointerclick {
+  from {
+    transform: translate3d(39.8vw, 6.9vw, 0) rotate(90deg)
+  }
+
+  to {
+    transform: translate3d(39.8vw, 7.5vw, 0) rotate(90deg)
+  }
+}
+
+@keyframes cursormov {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    height: 3vw;
+    width: 3vw;
+  }
+
+  to {
+    transform: translate3d(72.5vw, 29vw, 0) rotate(23deg);
+    height: 1.5vw;
+    width: 1.5vw;
+  }
+}
+
+@keyframes supercursormov {
+  from {
+    transform: translate3d(0, 0, 0);
+    height: 3vw;
+    width: 3vw;
+  }
+
+  to {
+    transform: translate3d(74.5vw, 24vw, 0);
+    height: 1.5vw;
+    width: 1.5vw;
+  }
+}
+
+@keyframes employeemov {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(39.9vw, -5vw, 0);
+  }
+}
+
+@keyframes employeerock {
+  from {
+    transform: translate3d(39.9vw, -5vw, 0);
+  }
+
+  to {
+    transform: translate3d(39.9vw, -4.4vw, 0);
+  }
+}
+
+@keyframes godfingermov {
+  from {
+    transform: translate3d(0, 0, 0);
+    height: 3vw;
+    width: 3vw;
+  }
+
+  to {
+    transform: translate3d(76.5vw, 14vw, 0);
+    height: 1.5vw;
+    width: 1.5vw;
+  }
+}
+
+@keyframes clickerfusionmov {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    height: 3vw;
+    width: 3vw;
+  }
+
+  to {
+    transform: translate3d(78.5vw, 9.4vw, 0) rotate(45deg);
+    height: 1.5vw;
+    width: 1.5vw;
+  }
+}
+
+body {
+  background: no-repeat fixed;
+  background-image: radial-gradient(rgb(250, 224, 65), rgb(249, 160, 40));
+  background-position: cover;
+  background-size: 100%;
+  font-family: CourierReg;
+  font-size: 1vw;
+  overflow: hidden;
+}
+
+a {
+  color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Classes */
+
+/* General + Multi-class */
+
+.buttons,
+.statstrs,
+.label,
+.shopinfostr,
+.shopbuttons {
+  border: solid black 0.05vw;
+}
+
+.shopstrings,
+.ushopstrings,
+.statstrs {
+  text-align: center;
+  cursor: default;
+}
+
+.buttons:not(#coin, #wipesavebutton, .bgelement, #fortheworthy, #breakpoint, #cheater):hover,
+.shopbuttons:hover {
+  box-shadow: 0.05vw 0.05vw 0.2px black, -0.05vw -0.05vw 0.2px black;
+}
+
+.buttons,
+.tsclicker {
+  background: transparent no-repeat center;
+  background-size: 90%;
+  font-family: CourierReg;
+  font-size: 1.1vw;
+  cursor: pointer;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.bgelement {
+  z-index: -1;
+}
+
+/* Title screen */
+
+.coins {
+  height: 9.5vw;
+  width: 9.5vw;
+  top: 40vh;
+  left: 43.6vw;
+  animation: coinOpacity 2.5s forwards;
+}
+
+.titlestr {
+  font-weight: 100;
+  animation: titlestrsmov 1s ease-out forwards;
+}
+
+.btmstr {
+  top: 100.5vh;
+  animation: btmstringmov 1s ease-out forwards;
+}
+
+/* Game screen */
+
+.borders {
+  top: -0.1vh;
+  height: 100vh;
+  width: 0.05vw;
+  display: none;
+}
+
+/* Shop panel */
+
+.shopbuttons {
+  background: transparent no-repeat center;
+  background-size: 90%;
+  transition: width 0.3s, height 0.3s;
+  height: 3vw;
+  width: 3vw;
+  left: 7.6vw;
+  cursor: pointer;
+}
+
+.shopbuttons:hover {
+  height: 3.2vw;
+  width: 3.2vw;
+}
+
+.shopstrings {
+  font-size: 0.9vw;
+  left: 10.8vw;
+}
+
+.shophover:hover {
+  height: 3.2vw;
+  width: 3.2vw;
+}
+
+.shophover:active {
+  height: 3vw;
+  width: 3vw;
+}
+
+/* Upgrade shop panel */
+
+.ushopstrings {
+  font-size: 0.9vw;
+  left: 10.8vw;
+}
+
+/* Stats panel */
+
+.statstrs {
+  position: relative;
+  width: 29vw;
+  left: 69vw;
+}
+
+/* Achievements panel */
+
+.ach.buttons {
+  background: transparent no-repeat center;
+  background-size: 90%;
+  height: 3vw;
+  width: 3vw;
+}
+
+.ach.icons {
+  font-size: 2.2vw;
+  vertical-align: middle;
+  line-height: 3vw;
+  height: 3.1vw;
+  width: 3.1vw;
+}
+
+/* Settings panel */
+
+.input {
+  border: solid 0.05vw black;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.2vw;
+  height: 1vw;
+  width: 10vw;
+}
+
+/* IDs and pseudoclasses */
+
+/* Multi-ID */
+
+#savebuttonhovercontainer .hover-trigger:hover+.hover-target,
+#achievementsbtnhovercontainer .hover-trigger:hover+.hover-target,
+#settingsbtnhovercontainer .hover-trigger:hover+.hover-target,
+#clickerhovercontainer .hover-trigger:hover+.hover-target,
+#superclickerhovercontainer .hover-trigger:hover+.hover-target,
+#doublepointerhovercontainer .hover-trigger:hover+.hover-target {
+  display: block;
+}
+
+#fortheworthy:hover,
+#breakpoint:hover {
+  box-shadow: 0.05vw 0.05vw 0.2px lightgreen, -0.05vw -0.05vw 0.2px lightgreen;
+}
+
+#wipesavebutton:hover,
+#cheater:hover {
+  box-shadow: 0.05vw 0.05vw 0.2px red, -0.05vw -0.05vw 0.2px red;
+}
+
+#upgradebutton,
+#shopreturnbutton {
+  height: 3vw;
+  width: 10vw;
+  top: 90vh;
+  left: 9vw;
+}
+
+/* Loading screen */
+
+#loadstring {
+  font-weight: 100;
+}
+
+/* Title screen */
+
+#bg {
+  height: 2vw;
+  width: 2vw;
+  top: -4vh;
+  opacity: 40%;
+  z-index: -1;
+  animation: bgmove 4s linear forwards;
+}
+
+#skipintrostring {
+  top: -0.1vh;
+  left: 34.1vw;
+  animation: coinOpacity 2.5s forwards;
+}
+
+#basedonbuildstring {
+  top: 102.5vh;
+  left: 86.5vw;
+}
+
+#surgelink {
+  top: 100.5vh;
+  left: 87vw;
+}
+
+#runningbrowserstring {
+  left: 12vw;
+  width: 5000vw;
+}
+
+#title {
+  font-size: 3.5vw;
+  width: 10vw;
+  top: -40vh;
+  left: 41vw;
+}
+
+#betastring {
+  font-size: 2.5vw;
+  top: -24.5vh;
+  left: 43vw;
+}
+
+#updatestring {
+  font-size: 1.5vw;
+  width: 37vw;
+  top: -17vh;
+  left: 30vw;
+}
+
+#startbutton {
+  height: 3vw;
+  width: 10vw;
+  top: 100vh;
+  left: 43.6vw;
+  animation: startmov 1.5s ease-out forwards;
+}
+
+#tsclicker {
+  background-image: url('../img/shop/clicker.png');
+  opacity: 0%;
+  height: 4vw;
+  width: 4vw;
+  top: -32vh;
+  left: 46.9vw;
+  animation: titlestrsmov 1.5s forwards, tsclickermov 1.5s 1s forwards;
+  cursor: default;
+}
+
+#sourcenote {
+  font-size: 0.9vw;
+}
+
+#key {
+  font-size: 1vw;
+  top: 2vh;
+}
+
+/* Game screen elements */
+
+#coin {
+  background-image: url('../img/coin.png');
+  border: none;
+  width: 14vw;
+  height: 14vw;
+  top: 13vw;
+  left: 42vw;
+  transition: all 0.2s;
+}
+
+#coin:hover {
+  background-size: 100%;
+}
+
+#coin:active {
+  background-size: 80%;
+}
+
+#coinparticle {
+  background-image: url('../img/coin.png');
+  border: none;
+  height: 2.5vw;
+  width: 2.5vw;
+  pointer-events: none;
+}
+
+#clickstring {
+  width: 37vw;
+  top: 26.7vw;
+  left: 30.5vw;
+  cursor: default;
+}
+
+#cpsstring {
+  width: 37vw;
+  top: 28.3vw;
+  left: 30.5vw;
+  cursor: default;
+}
+
+#clickvaluestring {
+  width: 37vw;
+  top: 30vw;
+  left: 30.5vw;
+  cursor: default;
+}
+
+#savebutton {
+  height: 3vw;
+  width: 10vw;
+  top: 0.5vw;
+  left: 44vw;
+}
+
+#savingstring {
+  width: 37vw;
+  top: 2.6vw;
+  left: 30.6vw;
+}
+
+#saveinfo {
+  width: 37vw;
+  top: 3vw;
+  left: 30.4vw;
+  font-size: 0.8vw;
+}
+
+#unlockstring {
+  width: 37vw;
+  top: 39vw;
+  left: 30.5vw;
+}
+
+#bufflabel {
+  width: 37vw;
+  top: 35vw;
+  left: 31vw;
+}
+
+#borders {
+  top: -0.1vw;
+}
+
+#leftborder {
+  left: 30vw;
+}
+
+#rightborder {
+  left: 68.5vw;
+}
+
+#achievementslabel {
+  width: 7.7vw;
+}
+
+#achievementsbutton {
+  height: 3vw;
+  width: 3vw;
+  top: 0.5vw;
+  left: 31vw;
+}
+
+#achievementsbtnicon {
+  height: 3.2vw;
+  width: 3.2vw;
+  top: 0.5vw;
+  left: 30.9vw;
+}
+
+#settingslabel {
+  width: 6.8vw;
+}
+
+#settingsbutton {
+  background-image: url('../img/settings/settings.png');
+  height: 3vw;
+  width: 3vw;
+  top: 0.5vw;
+  left: 64.7vw;
+}
+
+#fpslabel {
+  /* The style.display value of this property cannot be modified unless it is declared here. */
+  display: none;
+  top: -0.5vw;
+}
+
+/* Shop panel elements */
+
+#shopicon {
+  height: 3.5vw;
+  width: 3.5vw;
+  top: 1.28vw;
+  left: 8.3vw;
+}
+
+#shopstring {
+  font-size: 2.5vw;
+  top: -0.5vw;
+  left: 12.5vw;
+}
+
+#autobuystring {
+  width: 15vw;
+  font-size: 0.8vw;
+  top: 4vw;
+  left: 6vw;
+}
+
+#clickerinfo {
+  font-size: 0.8vw;
+  width: 13.5vw;
+}
+
+#clickerimg {
+  background-image: url('../img/shop/clicker.png');
+  border: none;
+  top: 7vw;
+}
+
+#clickerbuy {
+  background-image: url('../img/shop/clicker.png');
+  top: 7vw;
+}
+
+#clickerstring {
+  top: 5vw;
+  left: 7.2vw;
+}
+
+#clickercpsstring {
+  top: 6.2vw;
+}
+
+#clickercoststring {
+  top: 7.2vw;
+}
+
+#clickersownedstring {
+  top: 8.2vw;
+}
+
+#superclickerinfo {
+  font-size: 0.8vw;
+  width: 13.5vw;
+}
+
+#superclickerimg {
+  background-image: url('../img/shop/superclicker.png');
+  border: none;
+  top: 12vw;
+  animation: superclickermov 2s forwards;
+}
+
+#superclickerbuy {
+  background-image: url('../img/shop/superclicker.png');
+  top: 12vw;
+}
+
+#superclickerstring {
+  top: 10vw;
+  left: 5.6vw;
+}
+
+#superclickercpsstring {
+  top: 11.2vw;
+}
+
+#superclickercoststring {
+  top: 12.2vw;
+}
+
+#superclickersownedstring {
+  top: 13.2vw;
+}
+
+#doublepointerinfo {
+  font-size: 0.8vw;
+  width: 13.5vw;
+}
+
+#doublepointerimg {
+  background-image: url('../img/shop/doublepointer.png');
+  border: none;
+  top: 17vw;
+  animation: doublepointermov 2s forwards;
+}
+
+#doublepointerbuy {
+  background-image: url('../img/shop/doublepointer.png');
+  top: 17vw;
+}
+
+#doublepointerstring {
+  top: 15vw;
+  left: 5.5vw;
+}
+
+#doublepointercpsstring {
+  top: 16.2vw;
+}
+
+#doublepointercoststring {
+  top: 17.2vw;
+}
+
+#doublepointersownedstring {
+  top: 18.2vw;
+}
+
+/* Upgrade shop panel elements */
+
+#upgradeshopicon {
+  height: 3.5vw;
+  width: 3.5vw;
+  top: 1.28vw;
+  left: 5.8vw;
+}
+
+#upgradestring {
+  font-size: 2.5vw;
+  top: -0.5vw;
+  left: 10vw;
+}
+
+#cursorimg {
+  background-image: url('../img/shop/cursor.png');
+  border: none;
+  top: 7vw;
+  animation: cursormov 2s ease-out forwards;
+}
+
+#cursorbuy {
+  background-image: url('../img/shop/cursor.png');
+  top: 7vw;
+  display: block;
+}
+
+#cursorstring {
+  top: 5vw;
+  left: 7.55vw;
+}
+
+#cursorcpsstring {
+  top: 6.2vw;
+}
+
+#cursorcoststring {
+  top: 7.2vw;
+}
+
+#cursorownedstring {
+  top: 8.2vw;
+}
+
+#supercursorimg {
+  background-image: url('../img/shop/supercursor.png');
+  border: none;
+  top: 12vw;
+  animation: supercursormov 2s forwards;
+}
+
+#supercursorbuy {
+  background-image: url('../img/shop/supercursor.png');
+  top: 12vw;
+}
+
+#supercursorstring {
+  top: 10vw;
+  left: 6vw;
+}
+
+#supercursorcpsstring {
+  top: 11.2vw;
+}
+
+#supercursorcoststring {
+  top: 12.2vw;
+}
+
+#supercursorownedstring {
+  top: 13.2vw;
+}
+
+#employeeimg {
+  background-image: url('../img/shop/employee.png');
+  border: none;
+  top: 17vw;
+  animation: employeemov 2s forwards;
+}
+
+#employeebuy {
+  background-image: url('../img/shop/employee.png');
+  top: 17vw;
+}
+
+#employeestring {
+  top: 15vw;
+  left: 7vw;
+}
+
+#employeecpsstring {
+  top: 16.2vw;
+}
+
+#employeecoststring {
+  top: 17.2vw;
+}
+
+#employeesownedstring {
+  top: 18.2vw;
+}
+
+#godfingerimg {
+  background-image: url('../img/shop/godfinger.png');
+  border: none;
+  top: 22vw;
+  animation: godfingermov 2s forwards;
+}
+
+#godfingerbuy {
+  background-image: url('../img/shop/godfinger.png');
+  top: 22vw;
+}
+
+#godfingerstring {
+  top: 20vw;
+  left: 6.6vw;
+}
+
+#godfingerperkstring {
+  top: 21.2vw;
+}
+
+#godfingercoststring {
+  top: 22.2vw;
+}
+
+#godfingerownedstring {
+  top: 23.2vw;
+}
+
+#clickerfusioninfo {
+  font-size: 0.8vw;
+  width: 13.5vw;
+}
+
+#clickerfusionimg {
+  background-image: url('../img/shop/clicker.png');
+  border: none;
+  top: 27vw;
+  animation: clickerfusionmov 2s forwards;
+}
+
+#clickerfusionbuy {
+  background-image: url('../img/shop/clicker.png');
+  top: 27vw;
+}
+
+#clickerfusionstring {
+  top: 25vw;
+  left: 5.5vw;
+}
+
+#clickerfusionperkstring {
+  top: 26.2vw;
+}
+
+#clickerfusioncoststring {
+  top: 27.2vw;
+}
+
+#clickerfusionownedstring {
+  top: 28.2vw;
+}
+
+/* Stats panel elements */
+#statsstring {
+  font-size: 2.5vw;
+  width: 7.5vw;
+  top: -0.5vw;
+  left: 82vw;
+}
+
+#statsicon {
+  height: 3.5vw;
+  width: 3.5vw;
+  top: 1.28vw;
+  left: 78vw;
+}
+
+#timestring {
+  top: 5.5vw;
+}
+
+#lifetimeclicksstring {
+  top: 6vw;
+}
+
+#lifetimemanualclicksstring {
+  top: 6.5vw;
+}
+
+#coinclickcountstring {
+  top: 7vw;
+}
+
+#totalclickhelpersstring {
+  top: 7.5vw;
+}
+
+#achievementsunlockedstring {
+  top: 8vw;
+}
+
+#rawcpsstring {
+  top: 8.5vw;
+}
+
+#rawcvstring {
+  top: 9vw;
+}
+
+#offlinecpsstring {
+  top: 9.5vw;
+}
+
+/* Debug screen elements */
+
+#debugscreenlabel {
+  font-weight: 100;
+  font-size: 2.4vw;
+  top: 15vw;
+  left: 41.5vw;
+}
+
+#debuginputfield {
+  background: transparent;
+}
+
+#dbip {
+  font-size: 1.3vw;
+  top: 21.5vw;
+  left: 39.3vw;
+}
+
+#debugkeyinput {
+  border: solid 0.05vw black;
+  background: transparent;
+  font-family: inherit;
+  position: fixed;
+  resize: none;
+  height: 2vw;
+  width: 20vw;
+  top: 25vw;
+  left: 39vw;
+}
+
+#debugkeysubmit {
+  height: 2vw;
+  width: 7vw;
+  top: 28vw;
+  left: 45.5vw;
+}
+
+#incorrectkeyentered {
+  font-size: 15px;
+  top: 29.5vw;
+  left: 45.8vw;
+}
+
+#debugconsole {
+  border: solid 0.05vw black;
+  background: transparent;
+  font-family: inherit;
+  overflow: scroll;
+  height: 30vw;
+  width: 36vw;
+  top: 1vw;
+  left: 31vw;
+}
+
+#debugcmdinput {
+  border: solid 0.05vw black;
+  background: transparent;
+  font-family: inherit;
+  overflow: scroll;
+  height: 1.5vw;
+  width: 36vw;
+  top: 31.8vw;
+  left: 31vw;
+}
+
+/* Achievements screen element */
+
+#achievementsheader {
+  font-weight: 100;
+  font-size: 2vw;
+  top: 0vw;
+  left: 42.5vw;
+}
+
+#achievementnamestring {
+  width: 18vw;
+  top: 4vw;
+  left: 40.5vw;
+}
+
+#achievementdescriptionstring {
+  width: 36vw;
+  top: 6vw;
+  left: 31.5vw;
+}
+
+#achievementunlockedstring {
+  width: 36vw;
+  top: 9.5vw;
+  left: 31.5vw;
+}
+
+#journeybegins {
+  background-image: url('../img/achievements/thousandachievements.png');
+  top: 13vw;
+  left: 31.5vw;
+}
+
+#agoodstart {
+  background-image: url('../img/achievements/thousandachievements.png');
+  top: 13vw;
+  left: 34.5vw;
+}
+
+#gettingthere {
+  background-image: url('../img/achievements/thousandachievements.png');
+  top: 13vw;
+  left: 37.5vw;
+}
+
+#millionare {
+  background-image: url('../img/achievements/millionachievements.png');
+  top: 13vw;
+  left: 40.5vw;
+}
+
+#coinpool {
+  background-image: url('../img/achievements/millionachievements.png');
+  top: 13vw;
+  left: 43.5vw;
+}
+
+#abundance {
+  background-image: url('../img/achievements/millionachievements.png');
+  top: 13vw;
+  left: 46.5vw;
+}
+
+#billionare {
+  background-image: url('../img/achievements/billionachievements.png');
+  top: 13vw;
+  left: 49.5vw;
+}
+
+#excess {
+  background-image: url('../img/achievements/billionachievements.png');
+  top: 13vw;
+  left: 52.5vw;
+}
+
+#planetofclicks {
+  background-image: url('../img/achievements/billionachievements.png');
+  top: 13vw;
+  left: 55.5vw;
+}
+
+#trillionare {
+  background-image: url('../img/achievements/trillionachievements.png');
+  top: 13vw;
+  left: 58.5vw;
+}
+
+#pocketdimension {
+  background-image: url('../img/achievements/trillionachievements.png');
+  top: 13vw;
+  left: 61.5vw;
+}
+
+#fartoomany {
+  background-image: url('../img/achievements/trillionachievements.png');
+  top: 13vw;
+  left: 64.5vw;
+}
+
+#quadrillionare {
+  background-image: url('../img/achievements/quadrillionachievements.png');
+  top: 16vw;
+  left: 31.5vw;
+}
+
+#coinvortex {
+  background-image: url('../img/achievements/quadrillionachievements.png');
+  top: 16vw;
+  left: 34.5vw;
+}
+
+#coinshapedblackhole {
+  background-image: url('../img/achievements/quadrillionachievements.png');
+  top: 16vw;
+  left: 37.5vw;
+}
+
+#quintillionare {
+  background-image: url('../img/achievements/quintillionachievements.png');
+  top: 16vw;
+  left: 40.5vw;
+}
+
+#clickbeyond {
+  background-image: url('../img/achievements/quintillionachievements.png');
+  top: 16vw;
+  left: 43.5vw;
+}
+
+#distantbeginning {
+  background-image: url('../img/achievements/quintillionachievements.png');
+  top: 16vw;
+  left: 46.5vw;
+}
+
+#sextillionare {
+  background-image: url('../img/achievements/sextillionachievements.png');
+  top: 16vw;
+  left: 49.5vw;
+}
+
+#numberoverflow {
+  background-image: url('../img/achievements/sextillionachievements.png');
+  top: 16vw;
+  left: 52.5vw;
+}
+
+#coinuniverse {
+  background-image: url('../img/achievements/sextillionachievements.png');
+  top: 16vw;
+  left: 55.5vw;
+}
+
+#septillionare {
+  background-image: url('../img/achievements/septillionachievements.png');
+  top: 16vw;
+  left: 58.5vw;
+}
+
+#why {
+  background-image: url('../img/achievements/septillionachievements.png');
+  top: 16vw;
+  left: 61.5vw;
+}
+
+#twentyfingers {
+  background-image: url('../img/achievements/septillionachievements.png');
+  top: 16vw;
+  left: 64.5vw;
+}
+
+#fortheworthy {
+  top: 19vw;
+  left: 48vw;
+}
+
+#fortheworthyicon {
+  top: 19vw;
+  left: 48vw;
+}
+
+#breakpoint {
+  top: 25vw;
+  left: 48vw;
+}
+
+#breakpointicon {
+  top: 25vw;
+  left: 48vw;
+}
+
+#cheater {
+  top: 22vw;
+  left: 48vw;
+}
+
+#cheatericon {
+  top: 22vw;
+  left: 48vw;
+}
+
+#backtogame {
+  height: 3vw;
+  width: 10vw;
+  top: 90vh;
+  left: 44.5vw;
+}
+
+#settingsheader {
+  font-weight: 100;
+  font-size: 2.5vw;
+  top: 0vw;
+  left: 43.5vw;
+}
+
+#volumeinput {
+  border: solid 0.05vw black;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.2vw;
+  height: 1vw;
+  width: 7vw;
+  top: 10.5vh;
+  left: 56vw;
+}
+
+#volumestring {
+  font-size: 0.9vw;
+  top: 8.9vh;
+  left: 35vw;
+}
+
+#autobuysettingstr {
+  font-size: 0.9vw;
+  position: fixed;
+  top: 12.2vh;
+  left: 39vw;
+}
+
+#autobuysetting {
+  height: 1.5vw;
+  width: 5vw;
+  top: 13.4vh;
+  left: 54vw;
+}
+
+#graphicssetting {
+  height: 2vw;
+  width: 9vw;
+  top: 17vh;
+  left: 53vw;
+}
+
+#graphicssettingstr {
+  font-size: 0.9vw;
+  top: 16.3vh;
+  left: 35vw;
+}
+
+#bggrad1input {
+  top: 22vh;
+  left: 56.3vw;
+}
+
+#bggrad1string {
+  font-size: 0.9vw;
+  top: 20.5vh;
+  left: 31.5vw;
+}
+
+#bggrad2input {
+  top: 26vh;
+  left: 55.7vw;
+}
+
+#bggrad2string {
+  font-size: 0.9vw;
+  top: 24.5vh;
+  left: 31.8vw;
+}
+
+#wipesavebutton {
+  border: solid 0.05vw red;
+  color: red;
+  height: 3vw;
+  width: 10vw;
+  top: 83vh;
+  left: 44vw;
+}
+
+#resetbgbutton {
+  height: 3vw;
+  width: 10vw;
+  top: 76vh;
+  left: 44vw;
+}
+
+#backtogame2 {
+  height: 3vw;
+  width: 10vw;
+  top: 90vh;
+  left: 44vw;
+}
